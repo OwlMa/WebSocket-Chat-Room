@@ -13,12 +13,14 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/websocket").withSockJS();// if the browser does not support websocket, use websocket emulation SockJS fall back
+        // if the browser does not support websocket, use websocket emulation SockJS fall back
+        registry.addEndpoint("/websocket").withSockJS();
     }
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.setApplicationDestinationPrefixes("/app"); //STOMP messages whose destination header begins with /app are routed to@MessageMapping methods in @Controller classes.
+        //STOMP messages whose destination header begins with /app are routed to@MessageMapping methods in @Controller classes.
+        registry.setApplicationDestinationPrefixes("/app");
         registry.enableSimpleBroker("/topic");
     }
 }
