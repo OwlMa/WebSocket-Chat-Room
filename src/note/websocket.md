@@ -41,3 +41,5 @@
 - ![alt STOMP](./img/stomp.jpg)
 
 - spring websocket利用STOMP作为websocket的子协议，原因是stomp可以提供一种类似spring mvc的编码方式，可以利用注解进行接收和发送消息以及和spring mvc进行无缝的结合。
+
+- Detailed Stomp.js API see https://stomp-js.github.io/stomp-websocket/codo/class/Client.html
